@@ -7,10 +7,12 @@ int main()
 
     scanf("%s %s", &a, &b);
 
-    for (int i = 0; i <= strlen(b); i++)
-    {
-        a[i + strlen(a)] = b[i];
-    }
+    // for (int i = 0; i <= strlen(b); i++)
+    // {
+    //     a[i + strlen(a)] = b[i];
+    // }
+
+    strcat(a, b);
 
     printf("%s %s", a, b);
 

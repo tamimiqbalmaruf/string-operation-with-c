@@ -1,1 +1,2 @@
-catbat bat
+a = Small
+abbccc = Big
