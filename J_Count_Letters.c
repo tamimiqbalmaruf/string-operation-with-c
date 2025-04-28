@@ -1,24 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
-char s[10000001];
-
 int main()
 {
+    char s[10000001];
     scanf("%s", &s);
 
     int fre[26] = {0};
+    int len = strlen(s);
 
-    for (int i = 0; i < strlen(s); i++)
+    for (int i = 0; i < len; i++)
     {
-        fre[s[i] - 'a']++;
+        int idx = s[i] - 97;
+        fre[idx]++;
     }
 
     for (int i = 0; i < 26; i++)
     {
         if (fre[i] > 0)
         {
-            printf("%c : %d\n", i + 'a', fre[i]);
+            printf("%c : %d\n", i + 97, fre[i]);
         }
     }
     return 0;
